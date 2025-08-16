@@ -1,2 +1,64 @@
-<h1>Homes#about</h1>
-<p>Find me in app/views/homes/about.html.erb</p>
+<%= stylesheet_link_tag 'landing', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="landing-page">
+  <div class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">About<br>名言掲示板について</h1>
+      <p class="hero-subtitle">
+        心に響く言葉を共有し、みんなで成長できるコミュニティを目指しています。
+        偉人の名言から、あなたの心に響いた言葉まで、様々な価値観に触れることができます。
+      </p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="container">
+      <div class="section">
+        <h2>私たちのミッション</h2>
+        <p>
+          名言掲示板は、心に響く言葉を通じて人々がつながり、互いに励まし合い、
+          成長できるプラットフォームを提供することを目指しています。
+          偉人の名言から日常の気づきまで、様々な価値観に触れることで、
+          新しい視点や勇気を見つけることができます。
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>主な機能</h2>
+        <div class="features">
+          <div class="feature">
+            <h3>名言の閲覧</h3>
+            <p>偉人の名言から、みんなの投稿まで、心に響く言葉を自由に閲覧できます。</p>
+          </div>
+          <div class="feature">
+            <h3>名言の投稿</h3>
+            <p>あなたの心に響いた言葉や、誰かに伝えたい言葉を投稿できます。</p>
+          </div>
+          <div class="feature">
+            <h3>コミュニティ</h3>
+            <p>同じ価値観を持つ人々とつながり、互いに励まし合える環境を提供します。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>お問い合わせ</h2>
+        <p>
+          ご質問やご意見がございましたら、お気軽にお問い合わせください。
+          より良いサービスにするために、皆様の声をお聞かせください。
+        </p>
+        <div class="contact-info">
+          <p>Email: contact@sayings-app.com</p>
+          <p>Twitter: @sayings_app</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="cta-buttons">
+          <%= link_to 'トップページに戻る', root_path, class: 'btn btn-primary' %>
+          <%= link_to '名言を見つける', '', class: 'btn btn-ghost' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
