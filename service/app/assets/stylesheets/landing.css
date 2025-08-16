@@ -32,8 +32,40 @@ body {
   min-height: 100vh;
 }
 
+/* ヘッダーのスタイル調整 */
+.navbar {
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+  color: var(--text) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary) !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 .landing-page { 
-  min-height: 100vh;
+  height: calc(100vh - 70px); /* ヘッダーの高さを引く */
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -50,18 +82,22 @@ body {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-inner { 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 
 .hero-title { 
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.2;
   color: var(--text);
@@ -69,7 +105,7 @@ body {
 }
 
 .hero-subtitle { 
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--muted);
   max-width: 600px;
   margin: 0;
@@ -77,16 +113,16 @@ body {
 
 .hero-actions { 
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .btn { 
-  padding: 14px 28px;
+  padding: 12px 24px;
   border-radius: 12px;
   border: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
@@ -236,6 +272,15 @@ body {
 }
 
 @media (max-width: 640px) {
+  .landing-page {
+    height: calc(100vh - 56px);
+    padding: 10px;
+  }
+  
+  .hero {
+    padding: 0;
+  }
+  
   .hero-actions {
     flex-direction: column;
     width: 100%;
