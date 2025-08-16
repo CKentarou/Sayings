@@ -1,0 +1,16 @@
+.git
+.gitignore
+README.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+node_modules
+npm-debug.log
+tmp
+log
+*.log
+.DS_Store
+.env
+.env.*
+coverage
+.byebug_history
