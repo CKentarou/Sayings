@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag 'landing', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="auth-page">
+  <div class="auth-container">
+    <h1 class="auth-title">管理者ログイン</h1>
+    <p class="auth-subtitle">管理者アカウントでログインしてください</p>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email, "メールアドレス" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "admin@example.com" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password, "パスワード" %>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "パスワードを入力" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field remember-me">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me, "ログイン状態を保持する" %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "ログイン" %>
+      </div>
+    <% end %>
+
+    <div class="auth-links">
+      <div class="auth-divider">
+        <span>または</span>
+      </div>
+      <%= render "admins/shared/links" %>
+    </div>
+  </div>
+</div>
