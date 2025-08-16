@@ -39,6 +39,12 @@ body {
   padding: 20px;
 }
 
+/* Top page specific styles */
+.landing-page.top-page {
+  align-items: center;
+  justify-content: center;
+}
+
 .hero { 
   text-align: center;
   max-width: 800px;
